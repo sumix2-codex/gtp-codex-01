@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voxel Velocity</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="game"></canvas>
+
+    <div id="frontFlow" class="panel">
+      <h1>Voxel Velocity</h1>
+      <div class="row"><label>Track</label><select id="trackSelect"></select></div>
+      <div class="row"><label>Character</label><select id="charSelect"></select></div>
+      <div class="row"><label>Difficulty</label><select id="difficultySelect">
+        <option>Chill</option><option selected>Standard</option><option>Mean</option>
+      </select></div>
+      <div class="row"><label><input type="checkbox" id="mirrorToggle" /> Mirror Mode</label></div>
+      <div class="row"><label><input type="checkbox" id="cloneToggle" /> Clone Characters</label></div>
+      <div class="actions">
+        <button id="optionsBtn">Options</button>
+        <button id="startBtn">Start Race</button>
+      </div>
+      <p class="hint">1P vs CPU 7 / 3 Laps fixed</p>
+    </div>
+
+    <div id="optionsMenu" class="panel hidden">
+      <h2>Options</h2>
+      <div class="row"><label>Master Volume</label><input id="masterVolume" type="range" min="0" max="1" step="0.01" value="0.8" /></div>
+      <div class="row"><label>Music Volume</label><input id="musicVolume" type="range" min="0" max="1" step="0.01" value="0.65" /></div>
+      <div class="actions">
+        <button id="closeOptionsBtn">Back</button>
+      </div>
+    </div>
+
+    <div id="pauseMenu" class="panel hidden">
+      <h2>Paused</h2>
+      <div class="actions stack">
+        <button id="resumeBtn">Resume</button>
+        <button id="restartBtn">Restart</button>
+        <button id="quitBtn">Exit</button>
+      </div>
+    </div>
+
+    <div id="hud" class="hidden">
+      <div id="status"></div>
+      <div id="itemSlot">Item: -</div>
+      <div id="timer">00:00.000</div>
+      <canvas id="minimap" width="220" height="220"></canvas>
+      <div id="split"></div>
+    </div>
+  </div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
