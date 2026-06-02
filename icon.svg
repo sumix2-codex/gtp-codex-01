@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">出退勤システム</title>
+  <rect width="512" height="512" rx="112" fill="#1769e0"/>
+  <circle cx="256" cy="214" r="126" fill="#ffffff" opacity="0.96"/>
+  <path d="M256 112v108l78 45" fill="none" stroke="#1769e0" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M122 372h268" stroke="#ffffff" stroke-width="42" stroke-linecap="round"/>
+  <path d="M122 426h188" stroke="#dbe8ff" stroke-width="32" stroke-linecap="round"/>
+</svg>
