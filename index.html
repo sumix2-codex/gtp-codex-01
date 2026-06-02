@@ -26,13 +26,27 @@
 
     <main>
       <section id="front-view" class="view front-view" aria-labelledby="front-title">
-        <div class="hero-clock" aria-live="polite">
-          <p id="jst-date" class="date-display">----</p>
-          <p id="jst-time" class="time-display">--:--:--</p>
-          <p class="timezone-note">日本時間（JST）で自動更新</p>
+        <div class="front-dashboard">
+          <div class="hero-clock" aria-live="polite">
+            <p id="jst-date" class="date-display">----</p>
+            <p id="jst-time" class="time-display">--:--:--</p>
+            <p class="timezone-note">日本時間（JST）で自動更新</p>
+          </div>
+
+          <div class="stamp-card" role="group" aria-label="打刻操作">
+            <div>
+              <p class="eyebrow">Step 2</p>
+              <h2>打刻</h2>
+            </div>
+            <div class="stamp-actions">
+              <button id="clock-in" class="stamp-button clock-in" type="button">出勤</button>
+              <button id="clock-out" class="stamp-button clock-out" type="button">退勤</button>
+            </div>
+            <div id="status-message" class="status-message" role="status"></div>
+          </div>
         </div>
 
-        <div class="panel">
+        <div class="panel employee-panel">
           <div class="panel-heading">
             <div>
               <p class="eyebrow">Step 1</p>
@@ -42,13 +56,6 @@
           </div>
           <div id="employee-groups" class="employee-groups"></div>
         </div>
-
-        <div class="stamp-actions" aria-label="打刻操作">
-          <button id="clock-in" class="stamp-button clock-in" type="button">出勤</button>
-          <button id="clock-out" class="stamp-button clock-out" type="button">退勤</button>
-        </div>
-
-        <div id="status-message" class="status-message" role="status"></div>
       </section>
 
       <section id="admin-view" class="view admin-view is-hidden" aria-labelledby="admin-title">
